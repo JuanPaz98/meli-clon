@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;  
+    --primary-color: #ebebeb;
+    --secondary-color: #fff159;
+    --tertiary-color: #ffdb15;
+}
