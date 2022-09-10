@@ -1,6 +1,7 @@
 <div class="card">
-    <h2>{{product.title}}</h2>
-    <p>{{product.description}}</p>
-    <figure width="200px"><img width="100%" src={{product.image}} alt=""></figure>
-    <p><b> price {{product.price}} $</b></p>
+    <figure class="img-container"><img width="100%" src={{product.image}} alt=""></figure>
+    <div class="card-description">
+        <p><b> $ {{product.price}}</b></p>
+        <h2>{{product.title}}</h2>
+    </div>
 </div>

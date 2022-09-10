@@ -1,0 +1,17 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+.mySwiper{
+    height: 50vh;
+}
+.img-banner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-button-next::after{
+    font-size: 1.3rem;
+}
+.swiper-button-prev:after{
+    font-size: 1.3rem;
+} 
