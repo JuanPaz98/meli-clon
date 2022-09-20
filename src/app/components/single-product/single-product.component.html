@@ -1,7 +1,12 @@
 <div class="card">
-    <figure class="img-container"><img width="100%" src={{product.image}} alt=""></figure>
+    <figure class="img-container"><img  src={{product.image}} alt=""></figure>
     <div class="card-description">
-        <p><b> $ {{product.price}}</b></p>
-        <h2>{{product.title}}</h2>
+        <p class="product-price"> $ {{product.price}}</p>
+        <div class="discount" *ngIf="product.price > 50">
+            <p>Envío gratis</p>
+        </div>
+        <div class="title">
+            <h2 class="product-title">{{product.title}}</h2>
+        </div>
     </div>
 </div>
