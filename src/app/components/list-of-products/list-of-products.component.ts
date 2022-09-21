@@ -10,19 +10,7 @@ import { ApiProductsService }from '../../services/api-products.service'
 export class ListOfProductsComponent implements OnInit {
 
   constructor(private apiSvc: ApiProductsService) { }
-/*   product: Product = {
-    id: 0, 
-    title: '', 
-    price: 0, 
-    description: '', 
-    category: '', 
-    image: '', 
-    rating: {
-      rate: 0,
-        count: 0
-      }
-    }
-   */
+ 
   products: Product[] = [];
     
     getProducts(){

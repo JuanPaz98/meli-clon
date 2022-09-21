@@ -10,7 +10,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SwiperModule } from 'swiper/angular';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { PaymentsComponent } from './components/payments/payments.component';
-import { MainComponent } from './components/main/main.component'
+import { MainComponent } from './components/main/main.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { MainComponent } from './components/main/main.component'
     NavbarComponent,
     CarouselComponent,
     PaymentsComponent,
-    MainComponent
+    MainComponent,
+    ProductDetailComponent,
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
