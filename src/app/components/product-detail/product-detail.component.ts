@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiProductsService } from '../../services/api-products.service'
+import { SingleProductComponent } from '../single-product/single-product.component'
 
 @Component({
   selector: 'app-product-detail',
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor( apiSvc: ApiProductsService) { }
 
   ngOnInit(): void {
   }
-
+  product = SingleProductComponent
 }
