@@ -9,9 +9,10 @@ import { SingleProductComponent } from '../single-product/single-product.compone
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor( apiSvc: ApiProductsService) { }
+  constructor( public apiSvc: ApiProductsService) { }
 
-  ngOnInit(): void {
+  
+  ngOnInit(): void { 
   }
-  product = SingleProductComponent
+
 }

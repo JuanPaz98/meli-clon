@@ -6,11 +6,11 @@
     </div>
     <div class="first-section">
         <figure class="img-product-container">
-            <img src="https://static.dafiti.com.co/p/frenezi-4152-1164611-1-product.jpg" alt="">
+            <img src={{apiSvc.product.image}} alt="">
         </figure>
         <div class="product-description">
             <h2>Descripción</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus aliquid at architecto quia cum, accusantium vitae nihil necessitatibus obcaecati delectus similique modi corrupti quos dicta animi officiis laudantium voluptatibus nesciunt!0</p>
+            <p>{{apiSvc.product.description}}</p>
             <div class="questions">
                 <h2>Proguntale al vendedor</h2>
                 <div class="bar">
@@ -23,9 +23,9 @@
     <div class="second-section">
         <div class="about-product">
             <p class="sold">Nuevo | 200 vendidos</p>
-            <h2 class="product-title">chaqueta melita</h2>
-            <h2 class="product-price">$100000</h2>
-            <p class="cuotes">en 12x $ 33000 sin interés</p>
+            <h2 class="product-title">{{apiSvc.product.title}}</h2>
+            <h2 class="product-price">$ {{apiSvc.product.price}}</h2>
+            <p class="cuotes">en 12x $ {{apiSvc.product.price / 12 | number}} sin interés</p>
             <a href="#">ver los medios de pago</a>
             <div class="envio-container">
                 <img class="envio-icon" src="../../../assets/icons/transport.png" alt="">
