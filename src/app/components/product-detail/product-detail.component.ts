@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiProductsService } from '../../services/api-products.service'
-import { SingleProductComponent } from '../single-product/single-product.component'
+import { Product } from 'src/app/interfaces/product';
+import { ActivatedRoute } from '@angular/router';
+import { ApiProductsService } from 'src/app/services/api-products.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -9,10 +10,17 @@ import { SingleProductComponent } from '../single-product/single-product.compone
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor( public apiSvc: ApiProductsService) { }
+  constructor(public route: ActivatedRoute,
+              private apiProductsService: ApiProductsService) { }
 
-  
-  ngOnInit(): void { 
+  product: Product = {} as Product;
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      this.apiProductsService.getSingleProduct(id).subscribe(data => {
+        this.product = data.data;
+      })
+    })
   }
-
 }

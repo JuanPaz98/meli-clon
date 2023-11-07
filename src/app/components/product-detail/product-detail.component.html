@@ -6,11 +6,11 @@
     </div>
     <div class="first-section">
         <figure class="img-product-container">
-            <img src={{apiSvc.product.image}} alt="">
+            <img src={{product.urlImage}} alt="">
         </figure>
         <div class="product-description">
             <h2>Descripción</h2>
-            <p>{{apiSvc.product.description}}</p>
+            <p>{{product.description}}</p>
             <div class="questions">
                 <h2>Proguntale al vendedor</h2>
                 <div class="bar">
@@ -23,9 +23,9 @@
     <div class="second-section">
         <div class="about-product">
             <p class="sold">Nuevo | 200 vendidos</p>
-            <h2 class="product-title">{{apiSvc.product.title}}</h2>
-            <h2 class="product-price">$ {{apiSvc.product.price}}</h2>
-            <p class="cuotes">en 12x $ {{apiSvc.product.price / 12 | number}} sin interés</p>
+            <h2 class="product-title">{{product.title}}</h2>
+            <h2 class="product-price">$ {{product.unitPrice}}</h2>
+            <p class="cuotes">en 12x $ {{product.unitPrice / 12 | number}} sin interés</p>
             <a href="#">ver los medios de pago</a>
             <div class="envio-container">
                 <img class="envio-icon" src="../../../assets/icons/transport.png" alt="">

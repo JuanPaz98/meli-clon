@@ -1,38 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Product, ProductDTO } from '../interfaces/product';
+import { Product } from '../interfaces/product';
 import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs';
+import { Response } from '../interfaces/response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiProductsService {
-  product: Product = {    
-    id: 0, 
-    title: 'titulo producto', 
-    price: 0, 
-    description: '', 
-    category: '', 
-    image: '', 
-    rating: {
-      rate: 0,
-        count: 0
-      }
-  }
+  product: Product = { } as Product;
 
   constructor(private http: HttpClient) { }
 
-  apiURL = 'https://fakestoreapi.com/products/';
+  // apiURL = 'https://fakestoreapi.com/products/';
+  apiURL = 'https://localhost:44355/api/Product/';
+
+  getClients() {
+    return this.http.get<Response>(this.apiURL);
+  }
 
   getAllProducts(){
-    return this.http.get<Product[]>(this.apiURL)
+    return this.http.get<Response>(this.apiURL)
   }
 
   getSingleProduct(id:number){
-    return this.http.get<Product>(this.apiURL + id)
+    return this.http.get<Response>(this.apiURL + id)
   }
 
-  addProduct(product: ProductDTO): Observable<Product>{
-    return this.http.post<Product>(this.apiURL, product)
-  }
+  // addProduct(product: ProductDTO): Observable<Product>{
+  //   return this.http.post<Product>(this.apiURL, product)
+  // }
 }

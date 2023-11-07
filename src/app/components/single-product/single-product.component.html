@@ -1,8 +1,8 @@
-<div class="card" (click)="getSingleProduct()">
-    <figure class="img-container"><img  src={{product.image}} alt=""></figure>
+<div class="card">
+    <figure class="img-container"><img  src={{product.urlImage}} alt=""></figure>
     <div class="card-description">
-        <p class="product-price"> $ {{product.price}}</p>
-        <div class="discount" *ngIf="product.price > 50">
+        <p class="product-price"> $ {{product.unitPrice}}</p>
+        <div class="discount" *ngIf="product.unitPrice > 50">
             <p>Envío gratis</p>
         </div>
         <div class="title">
