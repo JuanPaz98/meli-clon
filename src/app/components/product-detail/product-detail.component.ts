@@ -10,17 +10,26 @@ import { ApiProductsService } from 'src/app/services/api-products.service';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor(public route: ActivatedRoute,
-              private apiProductsService: ApiProductsService) { }
-
   product: Product = {} as Product;
+  imageSelected: string = '';
+
+  constructor(
+    public route: ActivatedRoute, 
+    private apiProductsService: ApiProductsService
+  ) { }
+
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const id = params['id'];
       this.apiProductsService.getSingleProduct(id).subscribe(data => {
         this.product = data.data;
+        this.imageSelected = data.data.productImages[0].urlImage;
       })
     })
+  }
+
+  onChangeImage(imageId?: string) {
+    imageId ? this.imageSelected = imageId : '';
   }
 }

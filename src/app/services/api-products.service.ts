@@ -11,7 +11,6 @@ export class ApiProductsService {
 
   constructor(private http: HttpClient) { }
 
-  // apiURL = 'https://fakestoreapi.com/products/';
   apiURL = 'https://localhost:44355/api/Product/';
 
   getClients() {

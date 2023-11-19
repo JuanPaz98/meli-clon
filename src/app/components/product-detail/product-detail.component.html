@@ -1,12 +1,12 @@
 <section class="product-container" >
     <div class="product-imgs">
-        <img src="https://static.dafiti.com.co/p/frenezi-4152-1164611-1-product.jpg" alt="">
-        <img src="https://static.dafiti.com.co/p/frenezi-4152-1164611-1-product.jpg" alt="">
-        <img src="https://static.dafiti.com.co/p/frenezi-4152-1164611-1-product.jpg" alt="">
+        <ng-container *ngFor="let image of product.productImages">
+            <img [src]="image.urlImage" alt="" (click)="onChangeImage(image.urlImage)">
+        </ng-container>
     </div>
     <div class="first-section">
         <figure class="img-product-container">
-            <img src={{product.urlImage}} alt="">
+            <img [src]="imageSelected" alt="">
         </figure>
         <div class="product-description">
             <h2>Descripción</h2>

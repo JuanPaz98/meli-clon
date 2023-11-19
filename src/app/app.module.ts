@@ -14,6 +14,7 @@ import { MainComponent } from './components/main/main.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
+import { LoginModule } from 'src/login/login.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule, 
-    SwiperModule
+    SwiperModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

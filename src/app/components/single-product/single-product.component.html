@@ -1,5 +1,7 @@
 <div class="card">
-    <figure class="img-container"><img  src={{product.urlImage}} alt=""></figure>
+    <figure class="img-container">
+        <img  [src]="product.productImages[0]?.urlImage" alt="product-image">
+    </figure>
     <div class="card-description">
         <p class="product-price"> $ {{product.unitPrice}}</p>
         <div class="discount" *ngIf="product.unitPrice > 50">
