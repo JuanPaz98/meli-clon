@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ApiUserService } from 'src/login/services/api-user-service';
+import { ApiUserService } from '../../services/api-user-service';
 
 @Component({
-  selector: 'meli-form',
+  selector: 'meli-formulario',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent {
+export class MeliFormComponent {
 
   constructor(private apiUserService: ApiUserService) { }
 

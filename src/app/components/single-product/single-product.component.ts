@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Product } from 'src/app/interfaces/product';
+import { Product } from 'src/app/modules/core/interfaces/product';
 
 @Component({
   selector: 'single-product',

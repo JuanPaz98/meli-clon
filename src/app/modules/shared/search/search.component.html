@@ -1,0 +1,15 @@
+<div class="searchbar-container">
+    <input class="searchbar" type="text" 
+        placeholder="Busca productos, marcas y más... "
+        (keyup)="updateSearchValue($event)">
+    <div class="lupa">
+        <div class="icone lupa"></div>
+    </div>
+    <div style="width: 100%; background-color: white;">
+        <ul *ngFor="let item of listFiltered">
+            <li>
+                <p>{{item.title}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { BehaviorSubject, Observable, from, map } from 'rxjs';
+import { BehaviorSubject, Observable, map } from 'rxjs';
 import { User } from '../interfaces/user.interface';
-import { Response } from '../../app/interfaces/response';
+import { Response } from '../../../core/interfaces/response';
 
 @Injectable({
   providedIn: 'root'
