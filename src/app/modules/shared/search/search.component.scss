@@ -1,0 +1,106 @@
+.searchbar-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    .search-form {
+        display: flex;
+        width: 100%;
+        position: relative;
+        .search-input{
+            width: 100%;
+            height: 4rem;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+            font-size: 1.6em;
+            padding: 7px 60px 9px 15px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+        }
+        .search-input::placeholder { color: rgb(223, 223, 223); }
+        .search-input:focus {
+            border: 1px solid var(--blue);
+        }
+        .len{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: auto;
+            bottom: 0;
+            height: 4rem;
+            width: 4rem;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            justify-content: center; 
+            border: none;
+            .len-icon {
+                width: 16px;
+                height: 16px;
+                border: 2px solid gray;
+                border-radius: 50%;
+                position: relative;
+              }
+              
+              .len-icon:after {
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: gray;
+                display: block;
+                content: "";
+                top: 50%;
+                left: 50%;
+                transform: rotate(45deg);
+                transform-origin: -2px 8px;
+              }
+        }
+        .len::before {
+            content: "";
+            display: block;
+            height: 3rem;
+            border-left: 1px solid #e6e6e6;
+            position: absolute;
+            top: 0.5rem;
+            right: 4rem;
+        }
+    }
+    .results-container {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 4rem;
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+        z-index: 2;
+        .items-list {
+            list-style: none;
+            .item {
+                display: flex;
+                position: relative;
+                align-items: center;
+                width: 100%;
+                min-height: 4rem;
+                padding: 2rem 4rem;
+                .item-title::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 1rem;
+                    top: 1.5rem;
+                    background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path d="M398.725 689.682c156.825 0 284.95-128.125 284.95-284.95 0-157.85-128.125-284.95-284.95-284.95s-284.95 127.1-284.95 284.95c0 156.825 128.125 284.95 284.95 284.95zm0 56.375c-188.6 0-341.325-152.725-341.325-341.325S210.125 63.407 398.725 63.407 740.05 216.132 740.05 404.732 587.325 746.057 398.725 746.057zm235.75-65.6l248.05 248.05 39.976-39.975-19.474-20.5-227.55-227.55-20.5-19.475L615 660.982l19.476 19.475z" fill="%23999999"/>%3C/svg>') center center no-repeat;
+                    background-size: cover;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .item:hover {
+                background-color: var(--blue);
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    .results-container--active {
+        display: block;
+    }
+}

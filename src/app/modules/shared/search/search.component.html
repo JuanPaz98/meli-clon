@@ -1,14 +1,23 @@
 <div class="searchbar-container">
-    <input class="searchbar" type="text" 
-        placeholder="Busca productos, marcas y más... "
-        (keyup)="updateSearchValue($event)">
-    <div class="lupa">
-        <div class="icone lupa"></div>
-    </div>
-    <div style="width: 100%; background-color: white;">
-        <ul *ngFor="let item of listFiltered">
-            <li>
-                <p>{{item.title}}</p>
+    <form action="" class="search-form">
+        <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Busca productos, marcas y más..."
+            (keyup)="updateSearchValue($event)">
+        <button type="submit" class="len">
+            <div class="len-icon"></div>
+        </button>
+    </form>
+    <div #resultsContainerElement
+         class="results-container"
+         [class.results-container--active]="isResultsContainerActive">
+        <ul role="listbox" class="items-list">
+            <li  *ngFor="let item of listFiltered"
+                role="option" 
+                data-index="1"
+                class="item">
+                <span class="item-title">{{item.title}}</span>
             </li>
         </ul>
     </div>

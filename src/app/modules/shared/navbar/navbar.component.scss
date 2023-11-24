@@ -1,111 +1,81 @@
-.navbar{
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-    padding: 0 2rem;
-    background-color: var(--secondary-color);
-    height: 100px;
+.navbar-background  {
     width: 100%;
-    .first-list{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        a{
-            height: 5.4rem;
-            width: 14rem;
-            margin: 0 2rem;
-            figure{
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-        .searchbar-container{
-            width: 60%;
-            display: flex;
-            .searchbar{
-                width: 100%;
-                height: 4rem;
-                box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
-                font-size: 1.6em;
-                padding: 7px 60px 9px 15px;
-                border: none;
-                border-radius: 2px;
-            }
-            .lupa{
-                height: 4rem;
-                width: 4rem;
-                display: flex;
-                align-items: center;
-                background-color: #fff;
-                justify-content: center; 
-                box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
-                .icone.lupa {
-                    width: 16px;
-                    height: 16px;
-                    border: 2px solid gray;
-                    border-radius: 50%;
-                    position: relative;
-                  }
-                  
-                  .icone.lupa:after {
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: gray;
-                    display: block;
-                    content: "";
-                    top: 50%;
-                    left: 50%;
-                    transform: rotate(45deg);
-                    transform-origin: -2px 8px;
-                  }
-            }
-        }
-        .profile-list{
-            ul{
-                list-style: none;
-                display: flex;
-                li{
-                    /* width: fit-content; */
-                    padding: 0 .2rem;
-                    font-size: 1.1em;
-                    a{
-                        text-decoration: none;
-                        color: black;
-                    }
-                }
-            }        
-        }
-
-    }
-    .second-list{
-        display: flex;
-        height: 5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    .navbar-container{
+        max-width: 1200px;
         width: 100%;
-        nav {
+        .navbar{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            padding: 0 2rem;
+            
+            height: 10rem;
             width: 100%;
-            ul{
-                list-style: none;
+            .first-list{
                 display: flex;
-                li{
-                    /* width: fit-content; */
-                    padding: 0 1rem;
-                    font-size: 1.3em;
-                    a{
-                        text-decoration: none;
-                        color: black;
+                justify-content: space-between;
+                align-items: center;
+                a{
+                    height: 5.4rem;
+                    width: 14rem;
+                    margin: 0 2rem;
+                    figure{
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
-            }            
+                .profile-list{
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        li{
+                            /* width: fit-content; */
+                            padding: 0 .2rem;
+                            font-size: 1.1em;
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
+                        }
+                    }        
+                }
+        
+            }
+            .second-list{
+                display: flex;
+                height: 5rem;
+                width: 100%;
+                nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        li{
+                            /* width: fit-content; */
+                            padding: 0 1rem;
+                            font-size: 1.3em;
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
+                        }
+                    }            
+                }
+            }
+            .carrito{
+                width: 2rem;
+                height: auto;
+            }
         }
+        meli-search {
+            width: 50%;
     }
-    .carrito{
-        width: 2rem;
-        height: auto;
     }
 }

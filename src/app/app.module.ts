@@ -7,7 +7,6 @@ import { ListOfProductsComponent } from './components/list-of-products/list-of-p
 import { SingleProductComponent } from './components/single-product/single-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SwiperModule } from 'swiper/angular';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { MainComponent } from './components/main/main.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
@@ -20,7 +19,6 @@ import { SharedModule } from './modules/shared/shared.module';
     AppComponent,
     ListOfProductsComponent,
     SingleProductComponent,
-    CarouselComponent,
     PaymentsComponent,
     MainComponent,
     ProductDetailComponent,

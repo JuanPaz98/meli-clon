@@ -2,19 +2,20 @@ import { NgModule } from '@angular/core';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { CommonModule } from '@angular/common';
+import { CarouselModule } from './carousel/carousel.module';
 
 @NgModule({
-  declarations: [
-    
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     NavbarModule,
-    AuthenticationModule
+    AuthenticationModule,
+    CarouselModule
   ],
   exports: [
     NavbarModule,
-    AuthenticationModule
+    AuthenticationModule,
+    CarouselModule
   ],
 })
 export class SharedModule { }
