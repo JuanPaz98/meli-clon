@@ -3,19 +3,21 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from './carousel/carousel.module';
+import { SingleProductComponent } from './single-product/single-product.component';
+import { SingleProductModule } from './single-product/single-product.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [ ],
   imports: [
     CommonModule,
     NavbarModule,
     AuthenticationModule,
-    CarouselModule
+    CarouselModule,
   ],
   exports: [
     NavbarModule,
     AuthenticationModule,
-    CarouselModule
+    CarouselModule,
   ],
 })
 export class SharedModule { }

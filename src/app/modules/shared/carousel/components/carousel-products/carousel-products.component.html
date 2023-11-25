@@ -1,13 +1,20 @@
-<swiper 
-    [slidesPerView]="1" 
-    [spaceBetween]="0" 
-    [loop]=true 
-    [pagination]="{ clickable: true }" 
-    [autoplay]="{ delay: 4000, pauseOnMouseEnter: true, disableOnInteraction: false}"
-    [navigation]="true" class="mySwiper">
-    <ng-template swiperSlide><img class="img-banner" src="../../../assets/img/banner1.webp" alt=""></ng-template>
-    <ng-template swiperSlide><img class="img-banner" src="./../../assets/img/banner2.webp" alt=""></ng-template>
-    <ng-template swiperSlide><img class="img-banner" src="./../../assets/img/banner3.webp" alt=""></ng-template>
-    <ng-template swiperSlide><img class="img-banner" src="./../../assets/img/banner4.webp" alt=""></ng-template>
-    <ng-template swiperSlide><img class="img-banner" src="./../../assets/img/banner5.webp" alt=""></ng-template>
-</swiper>
+<div class="carousel-container">
+    
+    <swiper 
+        [slidesPerView]="5" 
+        [spaceBetween]="15" 
+        [slidesPerGroup]="5"
+        [watchOverflow]="true"
+        [loop]=false 
+        [autoplay]="false"
+        [allowTouchMove]="false"
+        [navigation]="true" class="carousel-products">
+        <ng-template swiperSlide  *ngFor="let product of products">
+            <single-product 
+                class="single-prod"
+                [product]="product"
+                routerLink="Product/{{product.id}}">
+            </single-product>
+        </ng-template>
+    </swiper>
+</div>

@@ -10,8 +10,5 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
   encapsulation: ViewEncapsulation.None
 })
 export class CarouselPromotionsComponent {
-  constructor(){
-
-  }
-  ngOnInit(): void {}
+  constructor(){}
 }

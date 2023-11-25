@@ -1,27 +1,33 @@
 @import "~swiper/css";
 @import "~swiper/css/pagination";
 @import "~swiper/css/navigation";
-.mySwiper{
-    height: 50vh;
-}
-.img-banner{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.swiper-button-next, .swiper-button-prev{
-    --swiper-navigation-size: 2rem;
-    background-color: white;
-    height: 7rem;
-    width: 5rem;
-    margin-top: -3.5rem;
-}
-
-.swiper-button-prev{
-    border-radius: 0 3.5rem 3.5rem 0;
-    left: -1.5rem;
-}
-.swiper-button-next {
-    border-radius: 3.5rem 0 0 3.5rem;
-    right: -1.5rem;
+.carousel-promotions {
+    background-color: var(--tertiary-color);
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-banner{
+        margin: auto;
+        max-width: 1600px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        --swiper-navigation-size: 2rem;
+        background-color: white;
+        height: 7rem;
+        width: 5rem;
+        margin-top: -3.5rem;
+    }
+    
+    .swiper-button-prev{
+        border-radius: 0 3.5rem 3.5rem 0;
+        left: -1.5rem;
+    }
+    .swiper-button-next {
+        border-radius: 3.5rem 0 0 3.5rem;
+        right: -1.5rem;
+    }
 }
